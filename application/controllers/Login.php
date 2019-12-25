@@ -4,9 +4,7 @@ class Login extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();		
-		$this->load->model('admin');			
-		$this->load->helper('url');
-
+		$this->load->model('admin');
 	}
 
 	function index(){
@@ -20,7 +18,7 @@ class Login extends CI_Controller{
 			'username' => $username,
 			'password' => md5($password)
 			);
-		$cek = $this->admin->cek_login("admin",$where)->num_rows();
+		$cek = $this->admin->cek_login("users",$where)->num_rows();
 		if($cek > 0){
 
 			$data_session = array(
@@ -30,7 +28,7 @@ class Login extends CI_Controller{
 
 			$this->session->set_userdata($data_session);
 
-			redirect(base_url("index"));
+			redirect('supplier');
 			
 		}else{
 			redirect(base_url("login"));
@@ -40,6 +38,6 @@ class Login extends CI_Controller{
 
 	function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url('login'));
+		redirect('.');
 	}
 }

@@ -2,7 +2,7 @@
 
 	class User extends CI_Model{
 		function read(){
-			return $this->db->get('user');
+			return $this->db->get('users');
 		}
 
 		function insert($data,$table){
