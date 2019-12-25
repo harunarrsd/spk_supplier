@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Login Session</title>
+		<title>SPK PT. Fesa</title>
+		<link rel="shortcut icon" href="<?php echo base_url();?>images/logo.png" type="image/x-icon">
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -20,12 +21,13 @@
     <!-- Icon -->
     <div class="fadeIn first">
       <img src="<?php echo base_url(); ?>images/logo.png" id="icon" alt="User Icon" />
+			<h6 class="container py-3">Sistem Pendukung Keputusan Pemilihan Supplier Pengadaan Truck Untuk Jasa Antar Barang Pada PT. Fesa Antaran Logistik</h6>
     </div>
     
     <!-- Login Form -->
     <form method="POST" action="<?php echo base_url(); ?>login/action">
-      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username">
-      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username" required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
       <input type="submit" class="fadeIn fifth" name="submit" value="Login">
     </form>
 
