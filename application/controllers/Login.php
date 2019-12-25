@@ -28,7 +28,7 @@ class Login extends CI_Controller{
 
 			$this->session->set_userdata($data_session);
 
-			redirect('supplier');
+			redirect('index');
 			
 		}else{
 			redirect(base_url("login"));
