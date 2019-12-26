@@ -5,7 +5,7 @@
 				<div class="card-header">
 					<a href="setting" class="btn"><i class="fa fa-gears"></i> Pengaturan</a>
 					<a href="" class="btn"><i class="fa fa-file"></i> Import File</a>
-					<button class="btn btn-info" id="tambah-data"><i class="fa fa-plus"></i> Tambah Baris</button>
+					<button class="btn" id="tambah-data"><i class="fa fa-plus"></i> Tambah Baris</button>
 					
 				</div>
 				<div class="card-body">

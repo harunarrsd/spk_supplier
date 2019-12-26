@@ -1,6 +1,6 @@
 <?php 
 
-class Index extends CI_Controller{
+class Home extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();		
@@ -15,6 +15,12 @@ class Index extends CI_Controller{
 			$this->load->view('layouts/header',$data);
 			$this->load->view('index',$data);
 			$this->load->view('layouts/footer',$data);
+	}
+
+	
+	function logout(){
+		$this->session->sess_destroy();
+		redirect('login');
 	}
 
 }

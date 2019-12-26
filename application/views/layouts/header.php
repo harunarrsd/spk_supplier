@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container">
-	<?php if($this->uri->segment(1) == 'index') { ?>
-		<a class="navbar-brand" href="<?php base_url(); ?>index">
+	<?php if($this->uri->segment(1) == 'home') { ?>
+		<a class="navbar-brand" href="<?php base_url(); ?>home">
 			<img class="img-fluid" src="<?php echo base_url(); ?>images/logo.png" style="width:40px; margin-right:10px" alt="">PT. Fesa Sejahtera
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,14 +15,13 @@
 						<!-- <img class="img-fluid" src="images/logo.png" alt=""> -->
 				</li>
 				<li class="nav-item">
-					<a class="btn btn-danger" href="logout.php">Logout <i class="fa fa-chevron-right"></i></a>
+					<a class="btn btn-danger" href="<?php base_url()?>home/logout">Logout <i class="fa fa-chevron-right"></i></a>
 				</li>
 			</ul>
 		</div>
 	<?php } ?>
 	<?php if($this->uri->segment(1) == 'supplier') { ?>
-		<!-- <a class="btn btn-primary"href="<?php base_url(); ?>index"><i class="fa fa-chevron-left"></i> Kembali</a> -->
-		<a href="<?php base_url(); ?>index" class="btn text-light"><i class="fa fa-chevron-left"></i> Kembali</a>
+		<a href="<?php base_url();?>home" class="btn text-light"><i class="fa fa-chevron-left"></i> Kembali</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -30,8 +29,8 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
 					<a class="nav-link" href="#">
-						</a>
 						<!-- <img class="img-fluid" src="images/logo.png" alt=""> -->
+						</a>
 				</li>
 				<li class="nav-item">
 					<h4 class="text-light">
