@@ -8,7 +8,7 @@
 		}
 
 		function create(){
-			$this->db->insert("suppliers",array("nama"=>""));
+			$this->db->insert("suppliers",array("nama_supplier"=>""));
 			return $this->db->insert_id();
 		}
 

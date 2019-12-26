@@ -1,3 +1,7 @@
+<script type="text/javascript" src="<?php echo base_url('assets/jquery.js'); ?>"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/sweetalert/sweetalert.min.js'); ?>"></script>
 <!-- Script -->
 <script type="text/javascript">
 
