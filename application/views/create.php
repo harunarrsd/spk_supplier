@@ -3,7 +3,7 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header">
-					<a href="" class="btn"><i class="fa fa-gears"></i> Pengaturan</a>
+					<a href="setting" class="btn"><i class="fa fa-gears"></i> Pengaturan</a>
 					<a href="" class="btn"><i class="fa fa-file"></i> Import File</a>
 					<button class="btn btn-info" id="tambah-data"><i class="fa fa-plus"></i> Tambah Baris</button>
 					
@@ -38,6 +38,9 @@
 							</tbody>
 						</table>
 					</div>
+				</div>
+				<div class="card-footer">
+					<a href="" class="btn btn-primary"><i class="fa fa-expand"></i> Hitung</a>
 				</div>
 			</div>
 		</div>
