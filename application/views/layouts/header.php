@@ -21,7 +21,8 @@
 		</div>
 	<?php } ?>
 	<?php if($this->uri->segment(1) == 'supplier') { ?>
-		<a class="btn btn-primary"href="<?php base_url(); ?>index"><i class="fa fa-chevron-left"></i> Kembali</a>
+		<!-- <a class="btn btn-primary"href="<?php base_url(); ?>index"><i class="fa fa-chevron-left"></i> Kembali</a> -->
+		<a href="<?php base_url(); ?>index" class="btn text-light"><i class="fa fa-chevron-left"></i> Kembali</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
