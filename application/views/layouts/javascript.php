@@ -26,7 +26,7 @@
 
           // Send AJAX request
           $.ajax({
-            url: '<?= base_url() ?>index.php/users/updateuser',
+            url: '<?= base_url() ?>users/updateuser',
             type: 'post',
             data: { field:fieldname, value:value, id:edit_id },
             success:function(response){

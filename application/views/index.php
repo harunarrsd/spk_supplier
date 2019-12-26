@@ -4,9 +4,9 @@
 		<div class="col-md-10">
 			<div class="row justify-content-center">
 				<div class="col-md-3">
-					<a href="Supplier/history" class="btn-home btn btn-block btn-success"><i class="fa fa-history"></i> Riwayat</a>
-					<a href="Supplier/history" class="btn-home btn btn-block btn-success"><i class="fa fa-folder"></i> Buka File</a>
-					<a href="Supplier/index" class="btn-home btn btn-block btn-success"><i class="fa fa-pencil"></i> Buat File</a>
+					<a href="supplier/history" class="btn-home btn btn-block btn-success"><i class="fa fa-history"></i> Riwayat</a>
+					<a href="supplier/history" class="btn-home btn btn-block btn-success"><i class="fa fa-folder"></i> Buka File</a>
+					<a href="supplier" class="btn-home btn btn-block btn-success"><i class="fa fa-pencil"></i> Buat File</a>
 				</div>
 			</div>
 		</div>
