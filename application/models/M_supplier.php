@@ -2,24 +2,27 @@
 
 	class M_supplier extends CI_Model{
 		function read(){
-			return $this->db->get('suppliers');
+			$this->db->order_by("id","desc");
+			$query=$this->db->get("suppliers");
+			return $query->result_array();
 		}
 
-		function insert($data,$table){
-			$this->db->insert($table,$data);
+		function create(){
+			$this->db->insert("suppliers",array("nama"=>""));
+			return $this->db->insert_id();
 		}
 
-		function delete($where,$table){
-			$this->db->where($where);
-			$this->db->delete($table);
+		function delete(){
+			$id= $this->input->post("id");
+			$this->crud_model->delete($id);
+			echo "{}";
 		}
 
-		function edit($where,$table){		
-			return $this->db->get_where($table,$where);
+		function update(){
+			$id= $this->input->post("id");
+			$value= $this->input->post("value");
+			$modul= $this->input->post("modul");
+			$this->m_supplier->update($id,$value,$modul);
+			echo "{}";
 		}
-
-		function update($where,$data,$table){
-			$this->db->where($where);
-			$this->db->update($table,$data);
-		}	
 }
