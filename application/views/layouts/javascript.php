@@ -26,7 +26,7 @@ $("#tambah-data").click(function(){
 			success: function(a){
 			var ele="";
 			ele+="<tr data-id='"+a.id+"'>";
-			ele+="<td><span class='span-nama caption' data-id='"+a.id+"'></span> <input type='text' class='field-nama form-control editor'  data-id='"+a.id+"' /></td>";
+			ele+="<td><span class='span-nama_supplier caption' data-id='"+a.id+"'></span> <input type='text' class='field-nama_supplier form-control editor'  data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-diskon caption' data-id='"+a.id+"'></span> <input type='text' class='field-diskon form-control editor' data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-pelayanan caption' data-id='"+a.id+"'></span> <input type='text' class='field-pelayanan form-control editor'  data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-karoseri caption' data-id='"+a.id+"'></span> <input type='text' class='field-karoseri form-control editor'  data-id='"+a.id+"' /></td>";
@@ -49,8 +49,8 @@ $(document).on("keydown",".editor",function(e){
 	var value=target.val();
 	var id=target.attr("data-id");
 	var data={id:id,value:value};
-	if(target.is(".field-nama")){
-	data.modul="nama";
+	if(target.is(".field-nama_supplier")){
+	data.modul="nama_supplier";
 	}else if(target.is(".field-diskon")){
 	data.modul="diskon";
 	}else if(target.is(".field-pelayanan")){

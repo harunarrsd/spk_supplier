@@ -10,7 +10,7 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#"><?php echo $this->session->userdata('nama');?>
+					<a class="nav-link text-capitalize" href="#"><?php echo $this->session->userdata('nama');?>
 						</a>
 						<!-- <img class="img-fluid" src="images/logo.png" alt=""> -->
 				</li>
