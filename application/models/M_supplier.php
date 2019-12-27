@@ -14,7 +14,7 @@
 
 		function delete(){
 			$id= $this->input->post("id");
-			$this->crud_model->delete($id);
+			$this->m_supplier->delete($id);
 			echo "{}";
 		}
 

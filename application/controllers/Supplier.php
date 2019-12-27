@@ -9,6 +9,8 @@ class Supplier extends CI_Controller
 		$this->load->model('user');
 		$this->load->model('m_supplier');
 		$this->load->model('m_bobot');
+		$this->load->model('m_konversi');
+		$this->load->model('m_hasil');
 		$this->load->database();
 	}
 
@@ -78,6 +80,24 @@ class Supplier extends CI_Controller
 		// $data['history'] = $this->m_bobot->read()->result();
         $data['header'] = $this->load->view('layouts/header','',true);
         $data['pages'] = $this->load->view('history',array('main'=>$data),true);
+		$this->load->view('master',array('main'=>$data));
+	}
+
+	function normalisasi()
+	{
+		$data['user'] = $this->user->read()->result();
+		$data['konversi'] = $this->m_konversi->read()->result();
+        $data['header'] = $this->load->view('layouts/header','',true);
+        $data['pages'] = $this->load->view('normalisasi',array('main'=>$data),true);
+		$this->load->view('master',array('main'=>$data));
+	}
+
+	function hasil()
+	{
+		$data['user'] = $this->user->read()->result();
+		$data['hasil'] = $this->m_hasil->read()->result();
+        $data['header'] = $this->load->view('layouts/header','',true);
+        $data['pages'] = $this->load->view('hasil',array('main'=>$data),true);
 		$this->load->view('master',array('main'=>$data));
 	}
 }

@@ -32,7 +32,7 @@ $("#tambah-data").click(function(){
 			ele+="<td><span class='span-karoseri caption' data-id='"+a.id+"'></span> <input type='text' class='field-karoseri form-control editor'  data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-program_servis caption' data-id='"+a.id+"'></span> <input type='text' class='field-program_servis form-control editor'  data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-bonus caption' data-id='"+a.id+"'></span> <input type='text' class='field-bonus form-control editor'  data-id='"+a.id+"' /></td>";
-			ele+="<td><button class='btn btn-xs btn-danger hapus-data' data-id='"+a.id+"'><i class='glyphicon glyphicon-remove'></i> Hapus</button></td>";
+			ele+="<td><button class='btn btn-xs btn-danger hapus-s' data-id='"+a.id+"'><i class='glyphicon glyphicon-remove'></i> Hapus</button></td>";
 			ele+="</tr>";
 
 			var element=$(ele);
@@ -78,7 +78,7 @@ $(document).on("keydown",".editor",function(e){
 });
 
 
-$(document).on("click",".hapus-data",function(){
+$(document).on("click",".hapus-s",function(){
 	var id=$(this).attr("data-id");
 	swal({
 		title:"Hapus data",
