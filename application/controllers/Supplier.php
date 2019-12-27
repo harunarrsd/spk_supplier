@@ -70,4 +70,14 @@ class Supplier extends CI_Controller
 		$this->session->set_flashdata('notif','<div class="alert alert-success alert-dismissible"><strong> Berhasil ubah Pengaturan Bobot ! </strong><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>');
 		redirect(base_url('supplier/setting'));
 	}
+
+	function history()
+	{
+		$data['user'] = $this->user->read()->result();
+		// $data['supplier'] = $this->m_supplier->read();
+		// $data['history'] = $this->m_bobot->read()->result();
+        $data['header'] = $this->load->view('layouts/header','',true);
+        $data['pages'] = $this->load->view('history',array('main'=>$data),true);
+		$this->load->view('master',array('main'=>$data));
+	}
 }

@@ -40,6 +40,9 @@
 						<?php if($this->uri->segment(2) == 'setting') { ?>
 						Pengaturan
 						<?php } ?>
+						<?php if($this->uri->segment(2) == 'history') { ?>
+						Riwayat
+						<?php } ?>
 					</h4>
 				</li>
 			</ul>
