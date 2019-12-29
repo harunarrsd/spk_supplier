@@ -33,9 +33,23 @@ class Supplier extends CI_Controller
 		echo "{}";
 	}
 
+	function update_alternatif(){
+		$id= $this->input->post("id");
+		$value= $this->input->post("value");
+		$modul= $this->input->post("modul");
+		$this->m_supplier->update_alternatif($id,$value,$modul);
+		echo "{}";
+	}
+
 	function delete(){
 		$id= $this->input->post("id");
 		$this->m_supplier->delete($id);
+		echo "{}";
+	}
+
+	function delete_alternatif(){
+		$id= $this->input->post("id");
+		$this->m_supplier->delete_alternatif($id);
 		echo "{}";
 	}
 

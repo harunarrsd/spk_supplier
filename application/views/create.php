@@ -3,8 +3,8 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header">
-					<a href="setting" class="btn"><i class="fa fa-gears"></i> Pengaturan</a>
-					<a href="" class="btn"><i class="fa fa-file"></i> Import File</a>
+					<a href="<?php echo base_url('supplier/setting');?>" class="btn"><i class="fa fa-gears"></i> Pengaturan</a>
+					<a href="<?php echo base_url('.');?>" class="btn"><i class="fa fa-file"></i> Import File</a>
 					<button class="btn" id="tambah-data"><i class="fa fa-plus"></i> Tambah Baris</button>
 					
 				</div>
@@ -31,7 +31,7 @@
 												<td><span class='span-karoseri caption' data-id='$s[id]'>$s[karoseri]</span> <input type='text' class='field-karoseri form-control editor' value='$s[karoseri]' data-id='$s[id]' /></td>
 												<td><span class='span-program_servis caption' data-id='$s[id]'>$s[program_servis]</span> <input type='text' class='field-program_servis form-control editor' value='$s[program_servis]' data-id='$s[id]' /></td>
 												<td><span class='span-bonus caption' data-id='$s[id]'>$s[bonus]</span> <input type='text' class='field-bonus form-control editor' value='$s[bonus]' data-id='$s[id]' /></td>
-												<td><button class='btn btn-xs btn-danger hapus-s' data-id='$s[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</button></td>
+												<td><button class='btn btn-xs btn-danger hapus-data' data-id='$s[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</button></td>
 											  </tr>";
 									}
 									?>

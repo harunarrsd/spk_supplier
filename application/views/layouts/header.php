@@ -21,7 +21,7 @@
 		</div>
 	<?php } ?>
 	<?php if($this->uri->segment(1) == 'supplier') { ?>
-		<a href="<?php base_url();?>home" class="btn text-light"><i class="fa fa-chevron-left"></i> Kembali</a>
+		<a href="<?php echo base_url('supplier');?>" class="btn text-light"><i class="fa fa-chevron-left"></i> Kembali</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>

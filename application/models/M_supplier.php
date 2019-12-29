@@ -25,4 +25,14 @@
 			$this->m_supplier->update($id,$value,$modul);
 			echo "{}";
 		}
+
+		function update_alternatif($id,$value,$modul){
+			$this->db->where(array("id"=>$id));
+			$this->db->update("suppliers",array($modul=>$value));
+		}
+
+		function delete_alternatif($id){
+			$this->db->where("id",$id);
+			$this->db->delete("suppliers");
+		}
 }

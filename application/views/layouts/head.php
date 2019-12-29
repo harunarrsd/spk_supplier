@@ -1,7 +1,7 @@
 <link rel="shortcut icon" href="<?php echo base_url(); ?>images/logo.png" type="image/x-icon">
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('vendor/sweetalert/sweetalert.css'); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/sweetalert/sweetalert.css'); ?>">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/index.css">
 
 <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->

@@ -50,7 +50,7 @@ $(document).on("keydown",".editor",function(e){
 	var id=target.attr("data-id");
 	var data={id:id,value:value};
 	if(target.is(".field-nama")){
-	data.modul="nama";
+	data.modul="nama_supplier";
 	}else if(target.is(".field-diskon")){
 	data.modul="diskon";
 	}else if(target.is(".field-pelayanan")){
@@ -65,7 +65,7 @@ $(document).on("keydown",".editor",function(e){
 
 	$.ajax({
 			data:data,
-			url:"<?php echo base_url('supplier/update'); ?>",
+			url:"<?php echo base_url('supplier/update_alternatif'); ?>",
 			success: function(a){
 			target.hide();
 			target.siblings("span[class~='caption']").html(value).fadeIn();
@@ -90,7 +90,7 @@ $(document).on("click",".hapus-data",function(){
 	},
 		function(){
 		 $.ajax({
-			url:"<?php echo base_url('supplier/delete'); ?>",
+			url:"<?php echo base_url('supplier/delete_alternatif'); ?>",
 			data:{id:id},
 			success: function(){
 				$("tr[data-id='"+id+"']").fadeOut("fast",function(){
