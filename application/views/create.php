@@ -25,7 +25,7 @@
 									// Data Supplier
 									foreach ($main['supplier'] as $s) {
 										echo "<tr data-id='$s[id]'>
-												<td><span class='span-nama caption' data-id='$s[id]'>$s[nama_supplier]</span> <input type='text' class='field-nama form-control editor' value='$s[nama_supplier]' data-id='$s[id]' /></td>
+												<td><span class='span-nama_supplier caption' data-id='$s[id]'>$s[nama_supplier]</span> <input type='text' class='field-nama_supplier form-control editor' value='$s[nama_supplier]' data-id='$s[id]' /></td>
 												<td><span class='span-diskon caption' data-id='$s[id]'>$s[diskon]</span> <input type='text' class='field-diskon form-control editor' value='$s[diskon]' data-id='$s[id]' /></td>
 												<td><span class='span-pelayanan caption' data-id='$s[id]'>$s[pelayanan]</span> <input type='text' class='field-pelayanan form-control editor' value='$s[pelayanan]' data-id='$s[id]' /></td>
 												<td><span class='span-karoseri caption' data-id='$s[id]'>$s[karoseri]</span> <input type='text' class='field-karoseri form-control editor' value='$s[karoseri]' data-id='$s[id]' /></td>

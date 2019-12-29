@@ -1,6 +1,11 @@
 <?php 
 
-	class M_supplier extends CI_Model{
+class M_supplier extends CI_Model{
+
+		function __construct(){
+			parent::__construct();		
+		}
+
 		function read(){
 			$this->db->order_by("id","desc");
 			$query=$this->db->get("suppliers");
@@ -12,18 +17,14 @@
 			return $this->db->insert_id();
 		}
 
-		function delete(){
-			$id= $this->input->post("id");
-			$this->crud_model->delete($id);
-			echo "{}";
+		function delete($id){
+			$this->db->where("id",$id);
+			$this->db->delete("suppliers");
 		}
 
-		function update(){
-			$id= $this->input->post("id");
-			$value= $this->input->post("value");
-			$modul= $this->input->post("modul");
-			$this->m_supplier->update($id,$value,$modul);
-			echo "{}";
+		function update($id,$value,$modul){
+			$this->db->where(array("id"=>$id));
+			$this->db->update("suppliers",array($modul=>$value));
 		}
 
 		function update_alternatif($id,$value,$modul){

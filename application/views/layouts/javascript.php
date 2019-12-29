@@ -26,13 +26,13 @@ $("#tambah-data").click(function(){
 			success: function(a){
 			var ele="";
 			ele+="<tr data-id='"+a.id+"'>";
-			ele+="<td><span class='span-nama caption' data-id='"+a.id+"'></span> <input type='text' class='field-nama form-control editor'  data-id='"+a.id+"' /></td>";
+			ele+="<td><span class='span-nama_supplier caption' data-id='"+a.id+"'></span> <input type='text' class='field-nama_supplier form-control editor'  data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-diskon caption' data-id='"+a.id+"'></span> <input type='text' class='field-diskon form-control editor' data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-pelayanan caption' data-id='"+a.id+"'></span> <input type='text' class='field-pelayanan form-control editor'  data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-karoseri caption' data-id='"+a.id+"'></span> <input type='text' class='field-karoseri form-control editor'  data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-program_servis caption' data-id='"+a.id+"'></span> <input type='text' class='field-program_servis form-control editor'  data-id='"+a.id+"' /></td>";
 			ele+="<td><span class='span-bonus caption' data-id='"+a.id+"'></span> <input type='text' class='field-bonus form-control editor'  data-id='"+a.id+"' /></td>";
-			ele+="<td><button class='btn btn-xs btn-danger hapus-data' data-id='"+a.id+"'><i class='glyphicon glyphicon-remove'></i> Hapus</button></td>";
+			ele+="<td><button class='btn btn-xs btn-danger hapus-s' data-id='"+a.id+"'><i class='glyphicon glyphicon-remove'></i> Hapus</button></td>";
 			ele+="</tr>";
 
 			var element=$(ele);
@@ -49,7 +49,11 @@ $(document).on("keydown",".editor",function(e){
 	var value=target.val();
 	var id=target.attr("data-id");
 	var data={id:id,value:value};
+<<<<<<< HEAD
 	if(target.is(".field-nama")){
+=======
+	if(target.is(".field-nama_supplier")){
+>>>>>>> 44813ab3a9344dd86a6fe4d18eb16afb59bb9019
 	data.modul="nama_supplier";
 	}else if(target.is(".field-diskon")){
 	data.modul="diskon";
@@ -78,7 +82,7 @@ $(document).on("keydown",".editor",function(e){
 });
 
 
-$(document).on("click",".hapus-data",function(){
+$(document).on("click",".hapus-s",function(){
 	var id=$(this).attr("data-id");
 	swal({
 		title:"Hapus data",

@@ -10,7 +10,7 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#"><?php echo $this->session->userdata('nama');?>
+					<a class="nav-link text-capitalize" href="#"><?php echo $this->session->userdata('nama');?>
 						</a>
 						<!-- <img class="img-fluid" src="images/logo.png" alt=""> -->
 				</li>
@@ -21,7 +21,12 @@
 		</div>
 	<?php } ?>
 	<?php if($this->uri->segment(1) == 'supplier') { ?>
+<<<<<<< HEAD
 		<a href="<?php echo base_url('supplier');?>" class="btn text-light"><i class="fa fa-chevron-left"></i> Kembali</a>
+=======
+		<!-- <a href="<?php base_url();?>tes" class="btn text-light"><i class="fa fa-chevron-left"></i> Kembali</a> -->
+		<a href="<?php echo base_url();?>home" class="btn text-light"><i class="fa fa-chevron-left"></i> Kembali</a>
+>>>>>>> 44813ab3a9344dd86a6fe4d18eb16afb59bb9019
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -39,6 +44,15 @@
 						<?php } ?>
 						<?php if($this->uri->segment(2) == 'setting') { ?>
 						Pengaturan
+						<?php } ?>
+						<?php if($this->uri->segment(2) == 'history') { ?>
+						Riwayat
+						<?php } ?>
+						<?php if($this->uri->segment(2) == 'normalisasi') { ?>
+						Data Ternormalisasi
+						<?php } ?>
+						<?php if($this->uri->segment(2) == 'hasil') { ?>
+						Hasil Penghitungan
 						<?php } ?>
 					</h4>
 				</li>
