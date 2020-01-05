@@ -17,16 +17,6 @@ class M_supplier extends CI_Model{
 			return $this->db->insert_id();
 		}
 
-		function delete($id){
-			$this->db->where("id",$id);
-			$this->db->delete("suppliers");
-		}
-
-		function update($id,$value,$modul){
-			$this->db->where(array("id"=>$id));
-			$this->db->update("suppliers",array($modul=>$value));
-		}
-
 		function update_alternatif($id,$value,$modul){
 			$this->db->where(array("id"=>$id));
 			$this->db->update("suppliers",array($modul=>$value));
@@ -35,5 +25,10 @@ class M_supplier extends CI_Model{
 		function delete_alternatif($id){
 			$this->db->where("id",$id);
 			$this->db->delete("suppliers");
+		}
+
+		function delete_konversi($id){
+			$this->db->where("id_supplier",$id);
+			$this->db->delete("supplier_konversi");
 		}
 }

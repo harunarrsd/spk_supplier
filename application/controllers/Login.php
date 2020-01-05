@@ -20,8 +20,9 @@ class Login extends CI_Controller{
 			);
 		$cek = $this->admin->cek_login("users",$where)->num_rows();
 		if($cek > 0){
-
+			$login = $this->admin->cek_login("users",$where)->row();
 			$data_session = array(
+				'id' => $login->id,
 				'nama' => $username,
 				'status' => "login"
 				);
@@ -31,9 +32,14 @@ class Login extends CI_Controller{
 			redirect('home');
 			
 		}else{
-			redirect(base_url("login"));
-			echo '<script type="text/javascript">alert("Username dan password salah !!");</script>';
+			$this->session->set_flashdata('notif','<div class="alert alert-danger alert-dismissible mx-4 font-kedua">Username atau Password Anda Salah !!<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>');
+			redirect('.');
 		}
+	}
+
+	function logout(){
+		$this->session->sess_destroy();
+		redirect('.');
 	}
 
 }

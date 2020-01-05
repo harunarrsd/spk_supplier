@@ -13,6 +13,9 @@ class Supplier extends CI_Controller
 		$this->load->model('m_konversi');
 		$this->load->model('m_hasil');
 		$this->load->database();
+		if($this->session->userdata('status')!='login'){
+			redirect('.');
+		}
 	}
 
 	function index()
@@ -28,14 +31,6 @@ class Supplier extends CI_Controller
 		echo json_encode(array("id"=>$this->m_supplier->create()));
 	}
 
-	function update(){
-		$id= $this->input->post("id");
-		$value= $this->input->post("value");
-		$modul= $this->input->post("modul");
-		$this->m_supplier->update($id,$value,$modul);
-		echo "{}";
-	}
-
 	function update_alternatif(){
 		$id= $this->input->post("id");
 		$value= $this->input->post("value");
@@ -44,14 +39,9 @@ class Supplier extends CI_Controller
 		echo "{}";
 	}
 
-	function delete(){
-		$id= $this->input->post("id");
-		$this->m_supplier->delete($id);
-		echo "{}";
-	}
-
 	function delete_alternatif(){
 		$id= $this->input->post("id");
+		$this->m_supplier->delete_konversi($id);
 		$this->m_supplier->delete_alternatif($id);
 		echo "{}";
 	}
@@ -59,12 +49,12 @@ class Supplier extends CI_Controller
 	function setting()
 	{
 		$data['user'] = $this->user->read()->result();
-		// $data['supplier'] = $this->m_supplier->read();
-		$data['bobot'] = $this->m_bobot->read(1)->result();
+		$data['bobot'] = $this->m_bobot->read()->result();
         $data['header'] = $this->load->view('layouts/header','',true);
         $data['pages'] = $this->load->view('setting',array('main'=>$data),true);
 		$this->load->view('master',array('main'=>$data));
 	}
+
 	function update_setting()
 	{
 		$id = $this->input->post('id');
@@ -88,16 +78,6 @@ class Supplier extends CI_Controller
 		redirect(base_url('supplier/setting'));
 	}
 
-	function history()
-	{
-		$data['user'] = $this->user->read()->result();
-		// $data['supplier'] = $this->m_supplier->read();
-		// $data['history'] = $this->m_bobot->read()->result();
-        $data['header'] = $this->load->view('layouts/header','',true);
-        $data['pages'] = $this->load->view('history',array('main'=>$data),true);
-		$this->load->view('master',array('main'=>$data));
-	}
-
 	function normalisasi()
 	{
 		$data['user'] = $this->user->read()->result();
@@ -111,8 +91,34 @@ class Supplier extends CI_Controller
 	{
 		$data['user'] = $this->user->read()->result();
 		$data['hasil'] = $this->m_hasil->read()->result();
+		$data['bobot'] = $this->m_bobot->read()->result();
         $data['header'] = $this->load->view('layouts/header','',true);
         $data['pages'] = $this->load->view('hasil',array('main'=>$data),true);
 		$this->load->view('master',array('main'=>$data));
+	}
+
+	function ranking()
+	{
+		$data['user'] = $this->user->read()->result();
+		$data['ranking'] = $this->m_hasil->read_ranking()->result();
+        $data['header'] = $this->load->view('layouts/header','',true);
+        $data['pages'] = $this->load->view('ranking',array('main'=>$data),true);
+		$this->load->view('master',array('main'=>$data));
+	}
+
+	function create_hasil(){
+		$id = $_POST['id_supplier_konversi'];
+		$value = $_POST['value'];
+		$data_documents = array();
+		$index = 0;
+		foreach($id as $datadocuments){
+			array_push($data_documents, array(
+				'id_supplier_konversi' => $datadocuments,
+				'value' => $value[$index],
+			));
+			$index++;
+		}
+		$this->m_hasil->create_hasil($data_documents);
+		redirect('supplier/ranking');
 	}
 }

@@ -1,12 +1,10 @@
 <?php 
 
 	class M_bobot extends CI_Model{
-		// function read_data_kas(){
-		// 	return $this->db->get('bobot');
-		// }
-		function read($id){
-			$this->db->where("id",$id);
-			return $this->db->get('bobot');
+		
+		function read(){
+			$sql = $this->db->query("SELECT * FROM bobot where id = 1");
+			return $sql;
 		}
 		function update($id,$data){
 			$this->db->where("id",$id);

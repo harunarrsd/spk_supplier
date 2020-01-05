@@ -1,5 +1,12 @@
 
 /* BASIC */
+/* Setup Font */
+.font-utama{
+	font-family: 'Baloo Bhai', cursive;
+}
+.font-kedua{
+	font-family: 'Montserrat', sans-serif;
+}
 
 html {
     background-color: #56baed;

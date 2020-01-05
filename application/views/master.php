@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-    <title>SPK PT.FESA</title>
+    <title>SPK PT. FESA Antaran Logistik</title>
     <?php $this->load->view('layouts/head') ?>
 </head>
 <body>
@@ -15,11 +15,9 @@
     <?php echo $main['header'];?>
     <!-- END header -->
 
-    <!-- <div class="content-wrapper"> -->
-        <!-- pages -->
-        <?php echo $main['pages']; ?>
-        <!-- END pages -->
-	<!-- </div> -->
+	<!-- pages -->
+	<?php echo $main['pages']; ?>
+	<!-- END pages -->
     
     <!-- footer -->
     <?php $this->load->view('layouts/footer')?>

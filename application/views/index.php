@@ -1,18 +1,45 @@
-<div class="container">
-	<div class="row justify-content-center">
-		<h1>Menu Utama</h1>
-		<div class="col-md-12">
-			<div class="row justify-content-center">
-				<div class="col-md-5">
-					<a href="<?php base_url();?>supplier/history" class="btn-home btn btn-block btn-success"><i class="fa fa-history"></i> Riwayat</a>
-					<a href="<?php base_url();?>supplier/open" class="btn-home btn btn-block btn-success"><i class="fa fa-folder"></i> Buka File</a>
-<<<<<<< HEAD
-					<a href="<?php base_url();?>supplier" class="btn-home btn btn-block btn-success"><i class="fa fa-pencil"></i> Buat File</a>
-=======
-					<a href="<?php base_url();?>supplier/index" class="btn-home btn btn-block btn-success"><i class="fa fa-pencil"></i> Buat File</a>
-					<a href="<?php base_url();?>supplier/normalisasi" class="btn-home btn btn-block btn-success"><i class="fa fa-angle-double-right"></i> Hasil Normalisasi</a>
-					<a href="<?php base_url();?>supplier/hasil" class="btn-home btn btn-block btn-success"><i class="fa fa-desktop"></i> Hasil Penghitungan</a>
->>>>>>> 44813ab3a9344dd86a6fe4d18eb16afb59bb9019
+<div class="body-utama pb-5">
+	<div class="container">
+		<h1 class="font-utama pt-5 pb-2">Menu Utama</h1>
+		<div class="row justify-content-center font-kedua">
+			<div class="col-md-3 mb-3">
+				<div class="card text-center pt-4">
+					<i class="fa fa-truck fa-5x"></i>
+					<div class="card-body">
+						<a href="<?php base_url();?>supplier" class="btn">
+							<h5 class="card-title">Supplier</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 mb-3">
+				<div class="card text-center pt-4">
+					<i class="fa fa-angle-double-right fa-5x"></i>
+					<div class="card-body">
+						<a href="<?php base_url();?>supplier/normalisasi" class="btn">
+							<h5 class="card-title">Hasil Normalisasi</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card text-center pt-4">
+					<i class="fa fa-desktop fa-5x"></i>
+					<div class="card-body">
+						<a href="<?php base_url();?>supplier/hasil" class="btn">
+							<h5 class="card-title">Hasil Perhitungan</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 mb-3">
+				<div class="card text-center pt-4">
+					<i class="fa fa-expand fa-5x"></i>
+					<div class="card-body">
+						<a href="<?php base_url();?>supplier/ranking" class="btn">
+							<h5 class="card-title">Hasil Ranking</h5>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

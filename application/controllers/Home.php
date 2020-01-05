@@ -6,21 +6,16 @@ class Home extends CI_Controller{
 		parent::__construct();		
 		$this->load->model('user');			
 		$this->load->helper('url');
-
+		if($this->session->userdata('status')!='login'){
+			redirect('.');
+		}
 	}
 
 	function index(){
 		$data['user'] = $this->user->read()->result();
-			$this->load->view('layouts/head',$data);
-			$this->load->view('layouts/header',$data);
-			$this->load->view('index',$data);
-			$this->load->view('layouts/footer',$data);
-	}
-
-	
-	function logout(){
-		$this->session->sess_destroy();
-		redirect('login');
+		$data['header'] = $this->load->view('layouts/header','',true);
+        $data['pages'] = $this->load->view('index',array('main'=>$data),true);
+		$this->load->view('master',array('main'=>$data));
 	}
 
 }
