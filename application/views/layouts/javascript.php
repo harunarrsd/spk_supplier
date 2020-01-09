@@ -84,6 +84,7 @@ $(document).on("keydown",".editor",function(e){
 
 $(document).on("click",".hapus-data",function(){
 	var id=$(this).attr("data-id");
+	var id_sk=$(this).attr("data-id_sk");
 	swal({
 		title:"Hapus data",
 		text:"Yakin akan menghapus Data ini?",
@@ -95,7 +96,7 @@ $(document).on("click",".hapus-data",function(){
 		function(){
 		 $.ajax({
 			url:"<?php echo base_url('supplier/delete_alternatif'); ?>",
-			data:{id:id},
+			data:{id:id,id_sk:id_sk},
 			success: function(){
 				$("tr[data-id='"+id+"']").fadeOut("fast",function(){
 					$(this).remove();

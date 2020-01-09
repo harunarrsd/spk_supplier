@@ -31,4 +31,9 @@ class M_supplier extends CI_Model{
 			$this->db->where("id_supplier",$id);
 			$this->db->delete("supplier_konversi");
 		}
+
+		function delete_hasil($id){
+			$this->db->where("id_supplier_konversi",$id);
+			$this->db->delete("hasil");
+		}
 }

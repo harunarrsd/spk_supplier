@@ -21,7 +21,7 @@ class Supplier extends CI_Controller
 	function index()
 	{
 		$data['user'] = $this->user->read()->result();
-		$data['supplier'] = $this->m_supplier->read();
+		$data['supplier'] = $this->m_konversi->read()->result_array();
         $data['header'] = $this->load->view('layouts/header','',true);
         $data['pages'] = $this->load->view('create',array('main'=>$data),true);
 		$this->load->view('master',array('main'=>$data));
@@ -39,8 +39,15 @@ class Supplier extends CI_Controller
 		echo "{}";
 	}
 
+	function update_hasil(){
+		$this->m_hasil->update_hasil();
+		redirect('supplier/ranking');
+	}
+
 	function delete_alternatif(){
 		$id= $this->input->post("id");
+		$id_sk= $this->input->post("id_sk");
+		$this->m_supplier->delete_hasil($id_sk);
 		$this->m_supplier->delete_konversi($id);
 		$this->m_supplier->delete_alternatif($id);
 		echo "{}";

@@ -19,7 +19,7 @@ foreach ($main['bobot'] as $k) {
 		<div class="row justify-content-center">
 			<div class="col-md-12">
 				<div class="card font-kedua" style="margin-top: 50px">
-				<?php echo form_open_multipart('supplier/create_hasil/');?>
+				<?php echo form_open_multipart('supplier/update_hasil/');?>
 					<div class="card-header">
 						<h3 class="card-title text-center">Tabel Hasil Perhitungan</h3>
 					</div>

@@ -21,6 +21,21 @@
 			return $this->db->insert_batch('hasil',$data);
 		}
 
+		function update_hasil(){
+			$id = $_POST['id_supplier_konversi'];
+			$value = $_POST['value'];
+			$data_documents = array();
+			$index = 0;
+			foreach($id as $datadocuments){
+				array_push($data_documents, array(
+					'id_supplier_konversi' => $datadocuments,
+					'value' => $value[$index],
+				));
+				$index++;
+			}
+			return $this->db->update_batch('hasil',$data_documents,'id_supplier_konversi');
+		}
+
 		function read_ranking(){
 			$sql = $this->db->query("SELECT * FROM hasil h JOIN supplier_konversi sk on h.id_supplier_konversi = sk.id JOIN suppliers s on sk.id_supplier = s.id GROUP BY h.id_supplier_konversi ORDER BY h.value desc");
 			return $sql;

@@ -109,7 +109,8 @@
 															<option value='5 Barang'>5 Barang</option>
 														</datalist>
 													</td>
-													<td><button class='btn btn-sm btn-danger hapus-data' data-id='$s[id]'><i class='fa fa-close'></i> Hapus</button></td>
+													<td>
+														<button class='btn btn-sm btn-danger hapus-data' data-id='$s[id]' data-id_sk='$s[id_supplier_konversi]'><i class='fa fa-close'></i> Hapus</button></td>
 												</tr>";
 										}
 										?>
