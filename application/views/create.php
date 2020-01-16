@@ -48,7 +48,7 @@
 																echo "<p>$s[diskon] %</p>";
 															}
 											echo "		</span>
-														<input type='text' class='field-diskon form-control editor' value='$s[diskon]' data-id='$s[id]'/>
+														<input type='number' class='field-diskon form-control editor' value='$s[diskon]' data-id='$s[id]'/>
 													</td>
 													<td>
 														<span class='span-pelayanan caption' data-id='$s[id]'>";
@@ -90,7 +90,7 @@
 																echo "<p>$s[program_servis]</p>";
 															}
 											echo "		</span>
-														<input type='text' class='field-program_servis form-control editor' value='$s[program_servis]' data-id='$s[id]' />
+														<input type='number' class='field-program_servis form-control editor' value='$s[program_servis]' data-id='$s[id]' />
 													</td>
 													<td>
 														<span class='span-bonus caption' data-id='$s[id]'>";

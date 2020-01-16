@@ -42,10 +42,10 @@ $("#tambah-data").click(function(){
 			var ele="";
 			ele+=`<tr data-id='"+a.id+"'>
 			<td><span class='span-nama_supplier caption' data-id='"+a.id+"'>Ketik Disini...</span><input type='text' class='field-nama_supplier form-control editor'  data-id='"+a.id+"' /></td>"
-			<td><span class='span-diskon caption' data-id='"+a.id+"'>Ketik Disini... </span> <input type='text' class='field-diskon form-control editor' data-id='"+a.id+"' /></td>"
+			<td><span class='span-diskon caption' data-id='"+a.id+"'>Ketik Disini... </span> <input type='number' class='field-diskon form-control editor' data-id='"+a.id+"' /></td>"
 			<td><span class='span-pelayanan caption' data-id='"+a.id+"'>Ketik Disini...</span> <input type='text' class='field-pelayanan form-control editor'  data-id='"+a.id+"' /></td>"
 			<td><span class='span-karoseri caption' data-id='"+a.id+"'>Ketik Disini...</span> <input type='text' class='field-karoseri form-control editor'  data-id='"+a.id+"' /></td>"
-			<td><span class='span-program_servis caption' data-id='"+a.id+"'>Ketik Disini...</span> <input type='text' class='field-program_servis form-control editor'  data-id='"+a.id+"' /></td>"
+			<td><span class='span-program_servis caption' data-id='"+a.id+"'>Ketik Disini...</span> <input type='number' class='field-program_servis form-control editor'  data-id='"+a.id+"' /></td>"
 			<td><span class='span-bonus caption' data-id='"+a.id+"'>Ketik Disini...</span> <input type='text' class='field-bonus form-control editor'  data-id='"+a.id+"' /></td>"
 			<td><button class='btn btn-sm btn-danger hapus-data' data-id='"+a.id+"'><i class='fa fa-close'></i> Hapus</button></td>"
 			</tr>`;

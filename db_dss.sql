@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 05 Jan 2020 pada 10.50
+-- Waktu pembuatan: 09 Jan 2020 pada 18.36
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.8
 
@@ -61,11 +61,12 @@ CREATE TABLE `hasil` (
 --
 
 INSERT INTO `hasil` (`id`, `id_supplier_konversi`, `value`) VALUES
-(16, 9, '0.885'),
-(17, 8, '1'),
-(18, 7, '0.761'),
-(19, 6, '0.792'),
-(20, 5, '0.615673');
+(70, 11, '0.712'),
+(71, 9, '0.885'),
+(72, 8, '1'),
+(73, 7, '0.761'),
+(74, 6, '0.792'),
+(75, 5, '0.615673');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,7 @@ INSERT INTO `suppliers` (`id`, `nama_supplier`, `diskon`, `pelayanan`, `karoseri
 (30, 'Remaja Putra', '15', 'Sangat Memuaskan', 'Grade A', '75000', '3 Barang'),
 (31, 'DGMI', '30', 'Sangat Memuaskan', 'Grade A', '100000', '5 Barang'),
 (32, 'Srikandi', '25', 'Sangat Memuaskan', 'Grade A', '100000', '5 Barang'),
-(33, '', NULL, NULL, NULL, NULL, NULL);
+(34, 'Toyota', '30', 'Kurang Memuaskan', 'Grade A', '2000', '4 Barang');
 
 --
 -- Trigger `suppliers`
@@ -220,7 +221,18 @@ INSERT INTO `supplier_konversi` (`id`, `konversi_1`, `konversi_2`, `konversi_3`,
 (7, 1, 5, 3, 3, 3, 30),
 (8, 2, 5, 3, 4, 5, 31),
 (9, 1, 5, 3, 4, 5, 32),
-(10, 0, 0, 0, 0, 0, 33);
+(11, 2, 2, 3, 1, 4, 34);
+
+--
+-- Trigger `supplier_konversi`
+--
+DELIMITER $$
+CREATE TRIGGER `insert_hasil` AFTER INSERT ON `supplier_konversi` FOR EACH ROW BEGIN
+    INSERT INTO hasil(id_supplier_konversi, value)
+    VALUES(new.id,0);
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -292,19 +304,19 @@ ALTER TABLE `bobot`
 -- AUTO_INCREMENT untuk tabel `hasil`
 --
 ALTER TABLE `hasil`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT untuk tabel `suppliers`
 --
 ALTER TABLE `suppliers`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT untuk tabel `supplier_konversi`
 --
 ALTER TABLE `supplier_konversi`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
